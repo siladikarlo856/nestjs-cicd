@@ -18,4 +18,4 @@ jobs:
       - name: Build the Docker image
         run: docker build -t nestjs-cicd .
       - name: Push image to Dockerhun
-        run: docker push nestjs-cicd developersiladi/nestjs-cicd:latest
+        run: docker image push developersiladi/nestjs-cicd:latest
