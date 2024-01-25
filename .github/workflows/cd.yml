@@ -14,7 +14,7 @@ jobs:
       - name: Pull Docker image
         run: sudo docker pull developersiladi/nestjs-cicd:latest
       - name: Stop and remove the container
-        run: docker stop nestjs-cicd && docker rm nestjs-cicd || true
+        run: sudo docker stop nestjs-cicd && sudo docker rm nestjs-cicd || true
 
       - name: Run the container
-        run: docker run -d --name nestjs-cicd -p 3000:3000 developersiladi/nestjs-cicd:latest
+        run: sudo docker run -d --name nestjs-cicd -p 3000:3000 developersiladi/nestjs-cicd:latest
